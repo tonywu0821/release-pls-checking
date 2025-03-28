@@ -4,7 +4,7 @@ run-name: Push to Master by @${{ github.actor }}
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - '**/*.md'
       - '**/documentation/**'
@@ -21,12 +21,12 @@ permissions:
 
 jobs:
   release-please:
-    runs-on: depot-ubuntu-22.04
+    runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
     steps:
-      - uses: googleapis/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
-          default-branch: master
+          default-branch: main
           package-name: test
