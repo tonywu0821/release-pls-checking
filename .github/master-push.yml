@@ -1,0 +1,32 @@
+name: Master Push
+run-name: Push to Master by @${{ github.actor }}
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**/*.md'
+      - '**/documentation/**'
+      - 'iac/**'
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: depot-ubuntu-22.04
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+    steps:
+      - uses: googleapis/release-please-action@v3
+        id: release
+        with:
+          default-branch: master
+          package-name: test
