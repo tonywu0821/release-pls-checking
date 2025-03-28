@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.1.0...v1.2.0) (2025-03-28)
+
+
+### Features
+
+* feature 2 ([#8](https://github.com/tonywu0821/release-pls-checking/issues/8)) ([cac6055](https://github.com/tonywu0821/release-pls-checking/commit/cac60555067627d9e7f7c2b96ad36cb8259212f4))
+
 ## [1.1.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.0.1...v1.1.0) (2025-03-28)
 
 
