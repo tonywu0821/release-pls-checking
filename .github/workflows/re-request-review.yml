@@ -1,0 +1,35 @@
+name: Ensure PR is Up to Date Before Merge
+
+on:
+  pull_request:
+    types: [synchronize, opened, reopened]
+
+  workflow_run:
+    workflows: ["release-please"]  # 你的主要 CI/CD workflow 名稱
+    types:
+      - completed  # 監聽 target branch 上的新 commit
+
+jobs:
+  check-branch-up-to-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if branch is up-to-date
+        run: |
+          BASE_BRANCH="${{ github.base_ref }}"
+          PR_BRANCH="${{ github.head_ref }}"
+          
+          git fetch origin $BASE_BRANCH
+          BEHIND_COMMITS=$(git rev-list --count HEAD..origin/$BASE_BRANCH)
+
+          if [ "$BEHIND_COMMITS" -gt 0 ]; then
+            echo "❌ The PR branch is not up to date with $BASE_BRANCH."
+            exit 1
+          fi
+
+      - name: Success Message
+        run: echo "✅ The PR branch is up to date!"
