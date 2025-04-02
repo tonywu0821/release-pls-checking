@@ -5,3 +5,5 @@ test commit after reset
 feature 1
 
 feature 2
+
+test 1
