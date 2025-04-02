@@ -1,0 +1,68 @@
+name: main Pull Request
+run-name: main Pull Request by @${{ github.actor }}
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - '**/*.md'
+      - '**/documentation/**'
+      - 'iac/**'
+    types:
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: write
+  statuses: write
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Welcome message
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const prAuthor = context.payload.pull_request.user.login;
+            
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: `👋 Thanks for opening this PR, @${prAuthor}!
+              
+              Your PR has been received and will be reviewed soon.
+              
+              ### PR Checklist
+              - [ ] Code follows project style guidelines
+              - [ ] Tests have been added/updated
+              - [ ] Documentation has been updated
+              - [ ] PR has appropriate title and description
+              `
+            });
+            
+      - name: PR validation
+        run: |
+          echo "PR #${{ github.event.pull_request.number }} created by ${{ github.event.pull_request.user.login }}"
+          echo "Title: ${{ github.event.pull_request.title }}"
+          echo "PR validation checks would run here"
+          
+          # Example validation (you can expand this as needed)
+          if [[ "${{ github.event.pull_request.title }}" != *"[TICKET-"* ]]; then
+            echo "::warning::PR title should include ticket reference like [TICKET-123]"
+          fi
