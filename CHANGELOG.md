@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.4.0...v1.5.0) (2025-04-02)
+
+
+### Features
+
+* workflow ([b2e33a0](https://github.com/tonywu0821/release-pls-checking/commit/b2e33a0423ab8697d6f140759eb2021ab77d5951))
+
 ## [1.4.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.3.0...v1.4.0) (2025-04-02)
 
 
