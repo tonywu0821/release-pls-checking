@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/tonywu0821/release-pls-checking/compare/v1.5.0...v1.5.1) (2025-04-03)
+
+
+### Bug Fixes
+
+* new file ([2f34690](https://github.com/tonywu0821/release-pls-checking/commit/2f34690d0458758a2e5477bafbc0ebbae47d9b7e))
+
 ## [1.5.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.4.0...v1.5.0) (2025-04-02)
 
 
