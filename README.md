@@ -6,6 +6,8 @@ feature 1
 
 feature 2
 
+fearture 4
+
 test 1
 
 test 2
