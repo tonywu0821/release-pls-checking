@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.5.1...v1.6.0) (2025-05-20)
+
+
+### Features
+
+* a conventional commit ([7002717](https://github.com/tonywu0821/release-pls-checking/commit/7002717d6e1738c1fa4a8aa911c8f4d66fe8b94d))
+
 ## [1.5.1](https://github.com/tonywu0821/release-pls-checking/compare/v1.5.0...v1.5.1) (2025-04-03)
 
 
