@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/tonywu0821/release-pls-checking/compare/v1.7.0...v1.7.1) (2025-05-20)
+
+
+### Bug Fixes
+
+* a convention ([2a4978b](https://github.com/tonywu0821/release-pls-checking/commit/2a4978b6323f92037a22e51a8eec529cfee466c3))
+
 ## [1.7.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.6.0...v1.7.0) (2025-05-20)
 
 
