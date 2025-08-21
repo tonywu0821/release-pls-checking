@@ -1,11 +1,11 @@
 {
   "name": "test-app",
-  "version": "1.22.0",
+  "version": "1.22.1",
   "description": "testing action",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "commit-and-tag-version --tag-prefix 'test-app-'"
+    "release": "commit-and-tag-version --tag-prefix 'test-app-' --message 'chore(main): release test-app v%s'"
   },
   "author": "",
   "license": "ISC",
