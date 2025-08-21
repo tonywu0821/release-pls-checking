@@ -21,4 +21,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: main
           release-type: node
-          path: apps
+      - name: Echo release created
+        run: "echo \"Release created: ${{ steps.release.outputs.release_created }}\""
