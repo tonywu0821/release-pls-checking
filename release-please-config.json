@@ -1,6 +1,13 @@
 {
   "release-type": "node",
   "packages": {
-    "apps": {}
+    "apps": {
+        "target-branch": "master",
+        "release-type": "node",
+        "bump-minor-pre-major": false,
+        "bump-patch-for-minor-pre-major": false,
+        "draft": false,
+        "prerelease": false
+    }
   }
 }
