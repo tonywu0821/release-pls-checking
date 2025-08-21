@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.23.2](https://github.com/tonywu0821/release-pls-checking/compare/test-app-v1.23.1...test-app-v1.23.2) (2025-08-21)
+
+
+### Bug Fixes
+
+* some changes ([f041161](https://github.com/tonywu0821/release-pls-checking/commit/f0411614d9772bfdebea7681ecae248a2c925e88))
+
 ## [1.23.1](https://github.com/tonywu0821/release-pls-checking/compare/test-app-v1.23.0...test-app-v1.23.1) (2025-08-21)
 
 ## [1.23.0](https://github.com/tonywu0821/release-pls-checking/compare/test-app-v1.22.1...test-app-v1.23.0) (2025-08-21)
