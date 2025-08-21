@@ -17,14 +17,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: googleapis/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          default-branch: main
+          target-branch: main
           release-type: node
           path: apps
-          package-name: test-app
       - name: Debug outputs
         run: |
           echo "All outputs from release step:"
