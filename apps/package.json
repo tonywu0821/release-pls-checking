@@ -1,0 +1,15 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "testing action",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "commit-and-tag-version"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commit-and-tag-version": "^12.5.2"
+  }
+}
