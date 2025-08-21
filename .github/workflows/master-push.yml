@@ -27,4 +27,4 @@ jobs:
           package-name: test-app
           
       - name: Echo release created
-        run: "echo \"Release created: ${{ steps.release.outputs.release_created }}\""
+        run: "echo \"Release created: ${{ steps.release.outputs.apps--release_created }}\""
