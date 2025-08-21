@@ -25,8 +25,8 @@ jobs:
           release-type: node
           path: apps
           package-name: test-app
-          
-      - name: Debug outputs 
+      - name: Debug outputs
         run: |
+          OUTPUTS="${{ toJSON(steps.release.outputs) }}"
           echo "All outputs from release step:"
-          echo "${{ toJSON(steps.release.outputs) }}"
+          echo "$OUTPUTS"
