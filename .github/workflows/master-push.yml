@@ -27,6 +27,6 @@ jobs:
           package-name: test-app
       - name: Debug outputs
         run: |
-          OUTPUTS="${{ toJSON(steps.release.outputs) }}"
           echo "All outputs from release step:"
-          echo "$OUTPUTS"
+          printf '%s\n' "${{ toJSON(steps.release.outputs) }}"
+
