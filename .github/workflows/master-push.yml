@@ -24,5 +24,7 @@ jobs:
           default-branch: main
           release-type: node
           path: apps
+          package-name: test-app
+          
       - name: Echo release created
         run: "echo \"Release created: ${{ steps.release.outputs.release_created }}\""
