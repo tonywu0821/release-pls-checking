@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.21.0](https://github.com/tonywu0821/release-pls-checking/compare/test-app-v1.15.0...test-app-1.21.0) (2025-08-21)
+
+
+### Features
+
+* 1 ([493d2f5](https://github.com/tonywu0821/release-pls-checking/commit/493d2f51a0535ffb8ab507c8ae31e50ed2acddfb))
+* 2 ([052e6fc](https://github.com/tonywu0821/release-pls-checking/commit/052e6fce4b8517ce6f3f7da4df84b26afe10503d))
+* 3 ([656c19e](https://github.com/tonywu0821/release-pls-checking/commit/656c19e6d5a3c095b357731b206b314722b8a64c))
+* add . ([6d677ac](https://github.com/tonywu0821/release-pls-checking/commit/6d677ac429ea36222053c8d3f1249a13d0c3e000))
+* formate ([19bda22](https://github.com/tonywu0821/release-pls-checking/commit/19bda228868329b2736763da64cc3802cfc49d3d))
+* some changes ([21941f7](https://github.com/tonywu0821/release-pls-checking/commit/21941f73dc061dc8908ac76b407d841f6f80cf39))
+* tag prefix ([27a0449](https://github.com/tonywu0821/release-pls-checking/commit/27a04490d08e26f0a1d57dda71416978140ced3b))
+
 ## 1.20.0 (2025-08-21)
 
 
