@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.19.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.18.1...v1.19.0) (2025-08-21)
+
+
+### Features
+
+* some changes ([21941f7](https://github.com/tonywu0821/release-pls-checking/commit/21941f73dc061dc8908ac76b407d841f6f80cf39))
+
 ## [1.18.1](https://github.com/tonywu0821/release-pls-checking/compare/v1.18.0...v1.18.1) (2025-08-21)
 
 ## [1.18.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.16.0...v1.18.0) (2025-08-21)
