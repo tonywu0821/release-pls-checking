@@ -22,8 +22,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: main
-          release-type: node
-          path: apps
       - name: Debug outputs
         run: |
           echo "All outputs from release step:"

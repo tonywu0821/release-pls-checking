@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "apps": {
+      "release-type": "node",
+      "package-name": "test-app"
+    }
+  }
+}
