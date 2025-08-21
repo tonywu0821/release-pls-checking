@@ -17,11 +17,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v3
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: main
+          default-branch: main
           release-type: node
           path: apps
       - name: Echo release created
