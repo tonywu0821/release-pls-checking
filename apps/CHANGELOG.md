@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.10.0...v1.11.0) (2025-08-21)
+
+
+### Features
+
+* new version ([b555d90](https://github.com/tonywu0821/release-pls-checking/commit/b555d902195335031b880988cc2588476c08bcf1))
+
 ## [1.10.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.9.0...v1.10.0) (2025-08-21)
 
 
