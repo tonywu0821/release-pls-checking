@@ -1,5 +1,20 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.14.0](https://github.com/tonywu0821/release-pls-checking/compare/v1.12.0...v1.14.0) (2025-08-21)
+
+
+### Features
+
+* v4 ([011683c](https://github.com/tonywu0821/release-pls-checking/commit/011683c7b90d985d0e0c2d70d747a2b7cf1ad9c2))
+* v4 ([b8b3484](https://github.com/tonywu0821/release-pls-checking/commit/b8b34847ab170e07b8aff218cf894853ed190362))
+
+
+### Bug Fixes
+
+* try v4 ([7b9f29a](https://github.com/tonywu0821/release-pls-checking/commit/7b9f29a085eb74999131201eb24b477f6c741a3d))
+
 ## [1.13.0](https://github.com/tonywu0821/release-pls-checking/compare/test-app-v1.12.0...test-app-v1.13.0) (2025-08-21)
 
 
