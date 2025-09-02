@@ -24,6 +24,6 @@ jobs:
           
       - name: Debug outputs
         run: |
-          echo "All outputs from release step:"
+          echo "All outputs from release step: "
           printf '%s\n' "${{ toJSON(steps.release.outputs) }}"
 
