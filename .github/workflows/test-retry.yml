@@ -1,0 +1,67 @@
+name: Test Artifact Across Attempts
+
+on: 
+  workflow_dispatch: # 手動觸發
+
+jobs:
+  fail-upload-retry-download:
+    runs-on: ubuntu-latest
+    steps:
+      # ========================================================
+      # 🔴 階段 1: 第一次嘗試 (Attempt 1)
+      # ========================================================
+      
+      # 1. 產生資料 (在失敗前先準備好檔案)
+      - name: 📝 Generate Error Log
+        if: github.run_attempt == 1
+        run: |
+          echo "這是一個重要的除錯檔案" > crash_info.txt
+          echo "失敗發生時間: $(date)" >> crash_info.txt
+          echo "錯誤代碼: 0xDEADBEEF" >> crash_info.txt
+          echo "已產生 crash_info.txt"
+
+      # 2. 模擬失敗 (這會導致 Job 狀態變為 failure)
+      - name: 💣 Simulate Crash
+        if: github.run_attempt == 1
+        run: |
+          echo "正在執行危險操作..."
+          sleep 3
+          echo "發生致命錯誤！準備退出。"
+          exit 1
+
+      # 3. 上傳 Artifact (關鍵：加上 if: failure())
+      # 這樣即使上面 exit 1 了，這一步還是會跑
+      - name: 📤 Upload Crash Artifact
+        if: failure() && github.run_attempt == 1
+        uses: actions/upload-artifact@v4
+        with:
+          name: previous-attempt-log # Artifact 名稱
+          path: crash_info.txt
+          retention-days: 1 # 測試用，保留一天就好
+
+      # ========================================================
+      # 🟢 階段 2: 第二次嘗試 (Attempt 2)
+      # ========================================================
+
+      # 4. 下載 Artifact
+      # 在 Re-run 時，我們去抓上一次 Run ID 留下的檔案
+      - name: 📥 Download Previous Artifact
+        if: github.run_attempt > 1
+        uses: actions/download-artifact@v4
+        with:
+          name: previous-attempt-log # 必須跟上傳的名稱一樣
+          # 不指定 path 預設會下載到當前目錄
+
+      # 5. 讀取並顯示內容
+      - name: 👀 Read Artifact Content
+        if: github.run_attempt > 1
+        run: |
+          echo "成功下載上一次失敗的 Artifact！"
+          echo "---------------------------------"
+          echo "檔案內容如下："
+          cat crash_info.txt
+          echo "---------------------------------"
+
+      - name: 🎉 Fix and Finish
+        if: github.run_attempt > 1
+        run: echo "修復完成，測試結束。"
